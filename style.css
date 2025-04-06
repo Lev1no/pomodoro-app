@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #eec39a;
+}
+
+#timer {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+button {
+  padding: 0; /* Remove padding to make images fill the button */
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold; /* Makes the font bold */
+  cursor: pointer;
+  border: none; /* Remove border to prevent any space around the image */
+  width: 88px; /* Set a fixed width for the action buttons */
+  height: 32px; /* Set a fixed height for the action buttons */
+  background-color: transparent; /* Remove background */
+  position: relative; /* To keep the image within the bounds */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smoth transition for hover */
+  
+}
+
+button:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Add shadow on hover */
+
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes the image fill the button and crop if needed */
+  border-radius: 0; /* Remove rounded corners for action buttons */
+}
+
+.mode-icon {
+  width: 64px; /* Make the mode icons larger (64x64) */
+  height: 64px; /* Match width and height */
+  margin: 10px;
+  padding: 0; /* Remove padding to make the icon fill the button */
+  border-radius: 12px; /* Rounded corners */
+  background-color: transparent; /* No background color */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover */
+}
+
+.mode-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.mode-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Fill the entire icon area with the image */
+  border-radius: 12px; /* Rounded corners for the image */
+  border: 3px solid #444; /* Dark gray border */
+}
+
+#mode-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#duration-selection {
+  display: none;
+}
+
+#timer-area {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#start, #pause, #reset {
+  width: 88px; /* Set the size for the action buttons */
+  height: 32px; /* Set the height for the action buttons */
+  border-radius: 0; /* Remove rounded corners for action buttons */
+}
+
+#start img, #pause img, #reset img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the button area */
+  border-radius: 0; /* No rounded corners for action buttons */
+}
+
+#start:hover, #pause:hover, #reset:hover {
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); /* Add shadow on hover */
+}

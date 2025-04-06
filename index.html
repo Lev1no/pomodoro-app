@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>🍅 Pomodoro</h1>
+
+    <!-- Pomodoro counter -->
+    <div id="counter-container">
+      <div id="counter">Completed Pomodoros: 0</div>
+      <!-- Restart button next to the counter -->
+      <button id="restart"><img src="assets/restart.ico" alt="restart"></button>
+    </div>
+
+    <!-- Mode selection with icons -->
+    <div id="mode-selection" style="display: flex; justify-content: center; gap: 20px;">
+      <div class="mode-icon" onclick="selectMode('work')">
+        <img src="assets/work.ico" alt="Work">
+      </div>
+      <div class="mode-icon" onclick="selectMode('rest')">
+        <img src="assets/rest.ico" alt="Rest">
+      </div>
+    </div>
+
+    <!-- Duration selection -->
+    <div id="duration-selection" style="display:none;"></div>
+
+    <!-- Timer + controls -->
+    <div id="timer-area" style="display:none;">
+      <div id="timer">00:00</div>
+        <button id="start"><img src="assets/start.ico" alt="start"></button>
+        <button id="pause"><img src="assets/pause.ico" alt="pause"></button>
+    </div>
+  </div>
+  
+  <!-- Add audio for button press -->
+  <audio id="button-sound" src="assets/button-press.mp3" preload="auto"></audio>
+  <audio id="alarm-sound" src="assets/alarm.mp3" preload="auto"></audio>
+
+  <script src="timer.js"></script>
+</body>
+</html>
